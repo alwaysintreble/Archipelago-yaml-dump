@@ -1,0 +1,77 @@
+
+### By dewiniaid ###
+
+# Merge into your YAML file as follows:
+A Link to the Past:
+  medallions: 
+    same: 0  # One medallion will be chosen at random and used for both Mire and TR entrances
+    different: 0  # The medallions chosen for the Mire and TR entrances are guarunteed to be different
+    random: 50  # No special behavior happens; misery_mire_medallion and turtle_rock_medallion function as normal
+# ...
+triggers:
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: same
+    options:
+      A Link to the Past:
+        medallions:
+          same-ether: 1
+          same-bombos: 1
+          same-quake: 1
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: different
+    options:
+      A Link to the Past:
+        medallions:
+          different-bombos: 1
+          different-quake: 1
+          different-ether: 1
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: same-ether
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Ether
+        turtle_rock_medallion: Ether
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: same-bombos
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Bombos
+        turtle_rock_medallion: Bombos
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: same-quake
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Quake
+        turtle_rock_medallion: Quake
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: different-ether
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Ether
+        turtle_rock_medallion:
+          Bombos: 1
+          Quake: 1
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: different-bombos
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Bombos
+        turtle_rock_medallion:
+          Ether: 1
+          Quake: 1
+  - option_name: medallions
+    option_category: A Link to the Past
+    option_result: different-quake
+    options:
+      A Link to the Past:
+        misery_mire_medallion: Quake
+        turtle_rock_medallion:
+          Ether: 1
+          Bombos: 1

@@ -1,0 +1,6 @@
+description: Open Preset
+name: Open{NUMBER}
+game: A Link to the Past
+A Link to the Past:
+  goals: ganon
+  mode: open

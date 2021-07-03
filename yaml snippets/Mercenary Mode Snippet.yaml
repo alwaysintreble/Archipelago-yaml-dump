@@ -1,22 +1,25 @@
-# checks to make sure the generator has necessary plando settings
-null:
-  requires:
-    plando: 
-      text, items
+#######################################
+#          Mercenay Mode V5           #
+# Add a 'mercenary' option to your Z3 #
+# section to use this trigger block   #
+#######################################
 triggers:
-  # trigger block for mercenary mode goal
+  ### Start Mecenary mode trigger block ###
+  # check to see if our goal is mecenary mode
   - option_name: goals
     option_result: mercenary
     option_category: A Link to the Past
     options:
+      # add the required plando stuff so the generation will fail if these are not turned on.
+      requires:
+        plando: items, texts
+      # convert the game into a 1/1 TFH
       A Link to the Past:
-        # turns the game into a 1/1 TFH when mercenary is set as the goal
         goals: triforce_hunt
-        triforce_pieces_mode: extra
-        triforce_pieces_extra: 0
+        triforce_pieces_mode: available
         triforce_pieces_available: 1
         triforce_pieces_required: 1
-        # randomizes boss location
+        # pick what arena we want to plando the triforce piece to feel free to edit these weights.
         mercenary_boss_location:
           eastern_palace: 1
           desert_palace: 1
@@ -28,7 +31,11 @@ triggers:
           thieves_town: 1
           skull_woods: 1
           turtle_rock: 1
-    # this block sets the triforce piece to the boss location and sets text on tavern fisherman to indicate which location
+        # update the ganon sign to our new goal.
+        plando_texts:
+          - text: "A hit has been put out on one of Ganon's generals."
+            at: sign_ganon
+  # plant the triforce piece on the selected boss and then planod the text to the man at the bar in kakariko tavern.
   - option_name: mercenary_boss_location
     option_result: eastern_palace
     option_category: A Link to the Past
@@ -41,8 +48,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour quarry slumbers behind sentinels of stone."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: desert_palace
     option_category: A Link to the Past
@@ -55,8 +60,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour prey lurks amidst the shifting sands."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: tower_of_hera
     option_category: A Link to the Past
@@ -69,8 +72,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour mark sits at the pinnacle of the realm."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: palace_of_darkness
     option_category: A Link to the Past
@@ -81,10 +82,8 @@ triggers:
               Triforce Piece: 1
             location: Palace of Darkness - Boss
         plando_texts:
-          - text: "hey @\nYour prey guards the depths of darkness."
+          - text: "hey @\nYou must kill the one upon the pitch black throne."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: swamp_palace
     option_category: A Link to the Past
@@ -95,10 +94,8 @@ triggers:
               Triforce Piece: 1
             location: Swamp Palace - Boss
         plando_texts:
-          - text: "hey @\nYour target dwells within a flooded ruin."
+          - text: "hey @\nYour target is in need of a plumber."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: skull_woods
     option_category: A Link to the Past
@@ -109,10 +106,8 @@ triggers:
               Triforce Piece: 1
             location: Skull Woods - Boss
         plando_texts:
-          - text: "hey @\nYour nemesis lies within a forest of bones."
+          - text: "hey @\nYour nemesis lies within the skull of a long dead beast."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: thieves_town
     option_category: A Link to the Past
@@ -125,8 +120,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour mark schemes within a den of evil."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: ice_palace
     option_category: A Link to the Past
@@ -139,8 +132,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour enemy sleeps beneath the frozen depths."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: misery_mire
     option_category: A Link to the Past
@@ -153,8 +144,6 @@ triggers:
         plando_texts:
           - text: "hey @\nYour target watches from a viscid lair."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
   - option_name: mercenary_boss_location
     option_result: turtle_rock
     option_category: A Link to the Past
@@ -167,5 +156,4 @@ triggers:
         plando_texts:
           - text: "hey @\nYour quarry rests within a beast of stone."
             at: kakariko_tavern_fisherman
-          - text: "A hit has been put out on one of Ganon's generals."
-            at: sign_ganon
+### END Mercenay mode triggerb block ###

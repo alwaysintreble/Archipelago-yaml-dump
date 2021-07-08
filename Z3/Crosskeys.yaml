@@ -1,0 +1,13 @@
+description: crosskeys
+name: CrossKeys{NUMBER}
+game: A Link to the Past
+accessibility: inventory
+requires:
+  version: 0.1.3
+A Link to the Past:
+  mode: open
+  goals:
+    ganon: 1
+    crystals: 1
+  entrance_shuffle: crossed
+  dungeon_items: mcsb

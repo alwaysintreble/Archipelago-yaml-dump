@@ -1,0 +1,12 @@
+description: ShopSanity Preset
+name: ShopSanity{NUMBER}
+game: A Link to the Past
+requires:
+  version: 0.1.3
+A Link to the Past:
+  goals:
+    ganon: 1
+    crystals: 1
+  mode: open
+  shop_item_slots: random
+  shop_shuffle: fpu # Generate new inventories, randomize prices and shuffle capacity upgrades into item pool.

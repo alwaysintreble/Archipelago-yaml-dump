@@ -1,0 +1,28 @@
+description: Ah so you like chaos
+name: Chaos{NUMBER}
+game: Factorio
+requires:
+  version: 0.1.3
+Factorio:
+  recipe_time: chaos
+  max_science_pack:
+    logistic_science_pack: 1
+    military_science_pack: 1
+    chemical_science_pack: 1
+    production_scuence_pack: 1
+  tech_cost:
+    kind: 1
+    normal: 1
+    hard: 1
+    very_hard: 1
+  free_samples:
+    none: 2
+    half_stack: 3
+    stack: 1
+  tech_tree_information:
+    none: 1
+    advancement: 3
+    full: 2
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19

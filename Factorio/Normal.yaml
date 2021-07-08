@@ -1,0 +1,21 @@
+description: Factorio Normal Preset
+name: Normal{NUMBER}
+game: Factorio
+requires:
+  version: 0.1.3
+Factorio:
+  tech_tree_layout:
+    small_diamonds: 1
+    medium_diamonds: 1
+    small_pyramids: 1
+    medium_pyramids: 1
+    small_funnels: 1
+    medium_funnels: 1
+  recipe_time: fast
+  max_science_pack: military_science_pack
+  tech_cost: kind
+  free_samples: stack
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19
+    submachine-gun: 1

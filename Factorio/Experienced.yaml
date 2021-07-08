@@ -1,0 +1,13 @@
+description: Experienced player preset
+name: Experienced{NUMBER}
+game: Factorio
+requires:
+  version: 0.1.3
+Factorio:
+  recipe_time: normal
+  max_science_pack: military_science_pack
+  tech_cost: hard
+  free_samples: stack
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19

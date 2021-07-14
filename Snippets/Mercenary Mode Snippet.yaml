@@ -6,7 +6,7 @@
 #######################################
 # add the required plando stuff as the generation will fail if these are not turned on.
 requires:
-  version: 0.1.3
+  version: 0.1.4
   plando:
     items, text
 triggers:

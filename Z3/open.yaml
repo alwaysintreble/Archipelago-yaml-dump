@@ -2,7 +2,7 @@ description: Open Preset
 name: Open{NUMBER}
 game: A Link to the Past
 requires:
-  version: 0.1.3
+  version: 0.1.4
 A Link to the Past:
   goals: ganon
   mode: open

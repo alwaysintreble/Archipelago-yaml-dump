@@ -2,7 +2,7 @@ description: beginner preset
 name: Beginner{NUMBER}
 game: Factorio
 requires:
-  version: 0.1.4
+  version: 0.1.5
 Factorio:
   tech_tree_layout:
     single: 1
@@ -18,8 +18,8 @@ Factorio:
   starting_items:
     burner-mining-drill: 19
     stone-furnace: 19
-    submachine-gun: 1
-  #doesn't work in current release but will with 0.1.5
+    lab: 1
+  #will auto generate your world with these settings
   world_gen:
     autoplace_controls:
       coal:
@@ -48,7 +48,6 @@ Factorio:
         richness: 1
       uranium-ore:
         frequency: 0
-    starting_area: 1
     peaceful_mode: 1
     cliff_settings:
       name: cliff

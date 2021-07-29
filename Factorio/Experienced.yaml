@@ -2,17 +2,16 @@ description: Experienced player preset
 name: Experienced{NUMBER}
 game: Factorio
 requires:
-  version: 0.1.4
+  version: 0.1.5
 Factorio:
   recipe_time: hard
   max_science_pack: chemical_science_pack
   recipe_ingredients: science_pack
   tech_cost: hard
-  free_samples: stack
+  free_samples: half_stack
   starting_items:
     burner-mining-drill: 19
     stone-furnace: 19
-  #doesn't work in current release but will with 0.1.5
   world_gen:
     autoplace_controls:
       coal:
@@ -35,9 +34,8 @@ Factorio:
         frequency: 2
         size: 5
         richness: 6
-      trees:
-        frequency: 2
-        size: 3
-        richness: 1
       uranium-ore:
-        frequency: 0
+        frequency: 2
+        size: 5
+        richness: 6
+      starting_area: 0.5

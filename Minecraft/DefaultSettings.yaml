@@ -1,0 +1,77 @@
+# What is this file?
+# This file contains options which allow you to configure your multiworld experience while allowing others
+# to play how they want as well.
+
+# How do I use it?
+# The options in this file are weighted. This means the higher number you assign to a value, the more
+# chances you have for that option to be chosen. For example, an option like this:
+#
+# map_shuffle:
+#   on: 5
+#   off: 15
+#
+# Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned off
+
+# I've never seen a file like this before. What characters am I allowed to use?
+# This is a .yaml file. You are allowed to use most characters.
+# To test if your yaml is valid or not, you can use this website:
+# http://www.yamllint.com/
+
+description: Template Name # Used to describe your yaml. Useful if you have multiple files
+name: YourName{number} # Your name in-game. Spaces will be replaced with underscores and there is a 16 character limit
+#{player} will be replaced with the player's slot number.
+#{PLAYER} will be replaced with the player's slot number if that slot number is greater than 1.
+#{number} will be replaced with the counter value of the name.
+#{NUMBER} will be replaced with the counter value of the name if the counter value is greater than 1.
+game: Minecraft
+requires:
+  version: 0.1.5 # Version of Archipelago required for this yaml to work as expected.
+# Shared Options supported by all games:
+accessibility:
+  items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
+  locations: 50 # Guarantees you will be able to access all locations, and therefore all items
+  none: 0 # Guarantees only that the game is beatable. You may not be able to access all locations or acquire all items
+progression_balancing:
+  on: 50 # A system to reduce BK, as in times during which you can't do anything by moving your items into an earlier access sphere to make it likely you have stuff to do
+  off: 0 # Turn this off if you don't mind a longer multiworld, or can glitch/sequence break around missing items.
+# The following 4 options can be uncommented and moved into a game's section they should affect
+# start_inventory: # Begin the file with the listed items/upgrades
+  # Please only use items for the correct game, use triggers if need to be have seperated lists.
+  # Pegasus Boots: on
+  # Bomb Upgrade (+10): 4
+  # Arrow Upgrade (+10): 4
+# start_hints: # Begin the game with these items' locations revealed to you at the start of the game. Get the info via !hint in your client.
+#   - Moon Pearl
+# local_items: # Force certain items to appear in your world only, not across the multiworld. Recognizes some group names, like "Swords"
+#  - "Moon Pearl"
+#  - "Small Keys"
+#  - "Big Keys"
+# non_local_items: # Force certain items to appear outside your world only, unless in single-player. Recognizes some group names, like "Swords"
+#  - "Progressive Weapons"
+# exclude_locations: # Force certain locations to never contain progression items, and always be filled with junk. 
+#  - "Master Sword Pedestal"
+
+Minecraft:
+  advancement_goal: 50 # Number of advancements required (out of 92 total) to spawn the Ender Dragon and complete the game.
+  combat_difficulty: # Modifies the level of items logically required for exploring dangerous areas and fighting bosses.
+    easy: 0
+    normal: 1
+    hard: 0
+  include_hard_advancements: # Junk-fills certain RNG-reliant or tedious advancements with XP rewards.
+    on: 0
+    off: 1
+  include_insane_advancements: # Junk-fills extremely difficult advancements; this is only How Did We Get Here? and Adventuring Time.
+    on: 0
+    off: 1
+  include_postgame_advancements: # Some advancements require defeating the Ender Dragon; this will junk-fill them so you won't have to finish to send some items.
+    on: 0
+    off: 1
+  shuffle_structures: # Enables shuffling of villages, outposts, fortresses, bastions, and end cities.
+    on: 0
+    off: 1
+  structure_compasses: # Adds structure compasses to the item pool, which point to the nearest indicated structure.
+    on: 0
+    off: 1
+  bee_traps: # Adds bee traps to the item pool, which spawn multiple angered bees around every player when received.
+    on: 0
+    off: 1

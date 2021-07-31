@@ -1,0 +1,122 @@
+description: LttP Race # Used to describe your yaml. Useful if you have multiple files
+name: Hyrule # Your name in-game. Spaces will be replaced with underscores and there is a 16 character limit
+
+game:
+  A Link to the Past: 1
+requires:
+  version: 0.1.5 # Version of Archipelago required for this yaml to work as expected.
+# Shared Options supported by all games:
+accessibility:
+  items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
+  locations: 50 # Guarantees you will be able to access all locations, and therefore all items
+  none: 0 # Guarantees only that the game is beatable. You may not be able to access all locations or acquire all items
+progression_balancing:
+  on: 50 # A system to reduce BK, as in times during which you can't do anything by moving your items into an earlier access sphere to make it likely you have stuff to do
+  off: 0 # Turn this off if you don't mind a longer multiworld, or can glitch/sequence break around missing items.
+A Link to the Past:
+  ### Logic Section ###
+  glitches_required: # Determine the logic required to complete the seed
+    none: 50 # No glitches required
+    minor_glitches: 0 # Puts fake flipper, waterwalk, super bunny shenanigans, and etc into logic
+    overworld_glitches: 0 # Assumes the player has knowledge of both overworld major glitches (boots clips, mirror clips) and minor glitches
+    hybrid_major_glitches: 0 # In addition to overworld glitches, also requires underworld clips between dungeons.
+    no_logic: 0 # Your own items are placed with no regard to any logic; such as your Fire Rod can be on your Trinexx.
+    # Other players items are placed into your world under HMG logic
+  dark_room_logic: # Logic for unlit dark rooms
+    lamp: 50 # require the Lamp for these rooms to be considered accessible.
+    torches: 0 # in addition to lamp, allow the fire rod and presence of easily accessible torches for access
+    none: 0 # all dark rooms are always considered doable, meaning this may force completion of rooms in complete darkness
+  restrict_dungeon_item_on_boss: # aka ambrosia boss items
+    on: 0 # prevents unshuffled compasses, maps and keys to be boss drops, they can still drop keysanity and other players' items
+    off: 50
+  ### End of Logic Section ###
+  dungeon_items: # Alternative to the 4 shuffles and local_keys above this, does nothing until the respective 4 shuffles and local_keys above are deleted
+    mc: 10 # Shuffle maps and compasses
+    none: 50 # Shuffle none of the 4
+    mcsb: 0 # Shuffle all of the 4, any combination of m, c, s and b will shuffle the respective item, or not if it's missing, so you can add more options here
+    lmcsb: 10 # Like mcsb above, but with keys kept local to your world. l is what makes your keys local, or not if it's missing
+    ub: 0 # universal small keys and shuffled big keys
+    # you can add more combos of these letters here
+  dungeon_counters:
+    on: 0 # Always display amount of items checked in a dungeon
+    pickup: 50 # Show when compass is picked up
+    default: 0 # Show when compass is picked up if the compass itself is shuffled
+    off: 0 # Never show item count in dungeons
+  progressive: # Enable or disable progressive items (swords, shields, bow)
+    on: 50 # All items are progressive
+    off: 0 # No items are progressive
+    random: 0 # Randomly decides for all items. Swords could be progressive, shields might not be
+  entrance_shuffle:
+    none: 50 # Vanilla game map. All entrances and exits lead to their original locations. You probably want this option
+    dungeonssimple: 0 # Shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
+    dungeonsfull: 25 # Shuffle any dungeon entrance with any dungeon interior, so Hyrule Castle can be 4 different dungeons, but keep dungeons to a specific world
+    dungeonscrossed: 0 # like dungeonsfull, but allow cross-world traversal through a dungeon. Warning: May force repeated dungeon traversal
+    simple: 0 # Entrances are grouped together before being randomized. Simple uses the most strict grouping rules
+    restricted: 0 # Less strict than simple
+    full: 0 # Less strict than restricted
+    crossed: 0 # Less strict than full
+    insanity: 0 # Very few grouping rules. Good luck
+  goals:
+    ganon: 1 # Climb GT, defeat Agahnim 2, and then kill Ganon
+    crystals: 10 # Only killing Ganon is required. However, items may still be placed in GT
+    bosses: 0 # Defeat the boss of all dungeons, including Agahnim's tower and GT (Aga 2)
+    pedestal: 1 # Pull the Triforce from the Master Sword pedestal
+    ganon_pedestal: 1 # Pull the Master Sword pedestal, then kill Ganon
+    triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then turn them in to Murahadala in front of Hyrule Castle
+    local_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout your world, then turn them in to Murahadala in front of Hyrule Castle
+    ganon_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then kill Ganon
+    local_ganon_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout your world, then kill Ganon
+    ice_rod_hunt: 0 # You start with everything needed to 216 the seed. Find the Ice rod, then kill Trinexx at Turtle rock.
+  open_pyramid: goal
+    triforce_pieces_mode: #Determine how to calculate the extra available triforce pieces.
+    extra: 0 # available = triforce_pieces_extra + triforce_pieces_required
+    percentage: 0 # available = (triforce_pieces_percentage /100) * triforce_pieces_required
+    available: 50 # available = triforce_pieces_available
+  triforce_pieces_extra:
+    5: 50
+    10: 50
+  triforce_pieces_percentage: 150
+  triforce_pieces_available: 30
+  triforce_pieces_required: 20  crystals_needed_for_gt: random-low
+  crystals_needed_for_ganon: random-high
+  mode:
+    standard: 25 # Begin the game by rescuing Zelda from her cell and escorting her to the Sanctuary
+    open: 50 # Begin the game from your choice of Link's House or the Sanctuary
+    inverted: 25 # Begin in the Dark World. The Moon Pearl is required to avoid bunny-state in Light World, and the Light World game map is altered
+  hints:
+    'on': 50 # Hint tiles sometimes give item location hints
+    'off': 0 # Hint tiles provide gameplay tips
+  boss_shuffle:
+    none: 75 # Vanilla bosses
+    basic: 0 # Existing bosses except Ganon and Agahnim are shuffled throughout dungeons
+    full: 0 # 3 bosses can occur twice
+    chaos: 0 # Any boss can appear any amount of times
+    singularity: 25 # Picks a boss, tries to put it everywhere that works, if there's spaces remaining it picks a boss to fill those
+  ### Shop Settings ###
+  shop_item_slots: # Maximum amount of shop slots to be filled with regular item pool items (such as Moon Pearl)
+    0: 50
+    5: 0
+    15: 0
+    30: 10
+    random: 0 # 0 to 30 evenly distributed
+  shop_shuffle:
+    none: 0
+    g: 0 # Generate new default inventories for overworld/underworld shops, and unique shops
+    f: 0 # Generate new default inventories for every shop independently
+    i: 0 # Shuffle default inventories of the shops around
+    p: 0 # Randomize the prices of the items in shop inventories
+    u: 50 # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld)
+    w: 0 # Consider witch's hut like any other shop and shuffle/randomize it too
+    ip: 0 # Shuffle inventories and randomize prices
+    fpu: 0 # Generate new inventories, randomize prices and shuffle capacity upgrades into item pool
+    uip: 0 # Shuffle inventories, randomize prices and shuffle capacity upgrades into the item pool
+    # You can add more combos
+  ### End of Shop Section ###
+triggers:
+  - option_name: shop_item_slots
+    option_result: 30
+    option_category: A Link to the Past
+    options:
+      A Link to the Past:
+        start_inventory:
+          Rupees (300): 2

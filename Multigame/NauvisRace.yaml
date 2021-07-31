@@ -1,0 +1,94 @@
+description: Racing Weights
+name: Nauvis
+game: Factorio
+requires:
+  version: 0.1.5
+# Shared Options supported by all games:
+accessibility:
+  items: 0
+  locations: 50
+  none: 0
+progression_balancing:
+  on: 50
+  off: 0
+Factorio:
+  tech_tree_layout:
+    single: 0
+    small_diamonds: 1
+    medium_diamonds: 1
+    large_diamonds: 1
+    small_pyramids: 1
+    medium_pyramids: 1
+    large_pyramids: 1
+    small_funnels: 1
+    medium_funnels: 1
+    large_funnels: 1
+  recipe_time:
+    vanilla: 0
+    fast: 0
+    normal: 1
+    slow: 0
+    chaos: 0
+  max_science_pack:
+    automation_science_pack: 0
+    logistic_science_pack: 1
+    military_science_pack: 0
+    chemical_science_pack: 0
+    production_science_pack: 0
+    utility_science_pack: 0
+    space_science_pack: 0
+  progressive:
+    on: 1
+    off: 0
+  tech_cost:
+    very_easy : 0
+    easy : 0
+    kind : 1
+    normal : 0
+    hard : 0
+    very_hard : 0
+    insane : 0
+  free_samples:
+    none: 0
+    single_craft: 0
+    half_stack: 0
+    stack: 1
+  tech_tree_information:
+    none: 0
+    advancement: 1 # show which items are a logical advancement
+    full: 0 # show full info on each tech node
+  imported_blueprints: off
+  recipe_ingredients:
+    rocket: 0 # only randomize rocket part recipe
+    science_pack: 1 # also randomize science pack ingredients
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19
+    lab: 1
+  world_gen:
+    autoplace_controls:
+      coal:
+        frequency: 2
+        size: 5
+        richness: 6
+      copper-ore:
+        frequency: 2
+        size: 5
+        richness: 6
+      crude-oil:
+        frequency: 3
+        size: 6
+        richness: 6
+      iron-ore:
+        frequency: 2
+        size: 5
+        richness: 6
+      stone:
+        frequency: 2
+        size: 5
+        richness: 6
+      uranium-ore:
+        frequency: 2
+        size: 5
+        richness: 6
+    seed: null

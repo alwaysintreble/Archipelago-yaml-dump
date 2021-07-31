@@ -1,0 +1,155 @@
+##This will add major/minor split to your game placing major items in big chests
+
+#requires section goes in root of yaml
+requires:
+  version: 0.1.5
+  plando_options: items
+
+Link to the Past:### copy everything below this line somewhere into the Link to the Past section of your yaml
+  plando_items:
+    - items:
+        Piece of Heart: 24
+      locations:
+        - Lost Woods Hideout
+        - Kakariko Well - Top
+        - Blind's Hideout - Top
+        - Maze Race
+        - Sunken Treasure
+        - Aginah's Cave
+        - Bonk Rock Cave
+        - Desert Ledge
+        - Zora's Ledge
+        - Spectacle Rock Cave
+        - Spectacle Rock
+        - Lumberjack Tree
+        - Pyramid
+        - Cave 45
+        - Lake Hylia Island
+        - Graveyard Cave
+        - Chest Game
+        - Digging Game
+        - Bumper Cave Ledge
+        - Peg Cave
+        - Mire Shed - Left
+        - Checkerboard Cave
+        - Floating Island
+        - Mimic Cave
+      world: Null
+      percentage: 100
+    - items:
+        Rupees (300): 5
+      locations:
+        - Brewery
+        - Hype Cave - Generous Guy
+        - C-Shaped House
+        - Mini Moldorm Cave - Generous Guy 
+        - Sewers - Secret Room - Middle
+      world: Null
+      percentage: 100
+    - items:
+        Rupees (20): 29
+      locations:
+        - Mire Shed - Right
+        - Hype Cave - Top
+        - Hype Cave - Middle Right
+        - Hype Cave - Middle Left
+        - Hype Cave - Bottom
+        - Superbunny Cave - Bottom
+        - Kakariko Well - Left
+        - Kakariko Well - Middle
+        - Kakariko Well - Right
+        - Blind's Hideout - Left
+        - Blind's Hideout - Right
+        - Blind's Hideout - Far Left
+        - Blind's Hideout - Far Right
+        - Mini Moldorm Cave - Left
+        - Mini Moldorm Cave - Right
+        - Turtle Rock - Eye Bridge - Bottom Right
+        - Palace of Darkness - Harmless Hellway
+        - Ganons Tower - DMs Room - Bottom Left
+        - Ganons Tower - DMs Room - Bottom Right
+        - Ganons Tower - Compass Room - Bottom Left
+        - Swamp Palace - Waterfall Room
+        - Swamp Palace - Flooded Room - Right
+        - Swamp Palace - Flooded Room - Left
+        - Thieves' Town - Ambush Chest
+        - Paradox Cave Lower - Left
+        - Paradox Cave Lower - Right
+        - Paradox Cave Lower - Middle
+        - Paradox Cave Lower - Far Right
+        - Paradox Cave Lower - Far Left
+      world: Null
+      percentage: 100
+    - items:
+        Rupees (50): 7
+      locations:
+        - Hookshot Cave - Top Right
+        - Hookshot Cave - Top Left
+        - Hookshot Cave - Bottom Right
+        - Hookshot Cave - Bottom Left
+        - Sahasrahla's Hut - Left
+        - Sahasrahla's Hut - Right
+        - Spiral Cave
+      world: Null
+      percentage: 100
+    - items:
+        Rupees (5): 2
+      locations:
+        - Palace of Darkness - Dark Maze - Bottom
+        - Turtle Rock - Eye Bridge - Top Left
+      world: Null
+    - items:
+        Rupees (100): 1
+      locations:
+        - Eastern Palace - Cannonball Chest
+      world: Null
+    - items:
+        Rupee (1): 2
+      locations:
+        - Turtle Rock - Eye Bridge - Top Right
+        - Ganons Tower - Compass Room - Top Right
+      world: Null
+    - items:
+        Bombs (3): 17
+      locations:
+        - Superbunny Cave - Top
+        - Ice Palace - Freezor Chest
+        - Palace of Darkness - Dark Maze - Top
+        - Floodgate Chest
+        - Kakariko Well - Bottom
+        - Mini Moldorm Cave - Far Left
+        - Sahasrahla's Hut - Middle
+        - Ganons Tower - Hope Room - Right
+        - Ganons Tower - DMs Room - Top Left
+        - Ganons Tower - Big Key Room - Right
+        - Ganons Tower - Mini Helmasaur Room - Left
+        - Ganons Tower - Mini Helmasaur Room - Right
+        - Ganons Tower - Randomizer Room - Bottom Left
+        - Ganons Tower - Randomizer Room - Bottom Right
+        - Thieves' Town - Attic
+        - Sewers - Secret Room - Left
+        - Paradox Cave Upper - Left
+      world: Null
+      percentage: 100
+    - items:
+        Single Arrow: 1
+      locations:
+        - Ganons Tower - Validation Chest
+      world: Null
+      percentage: 100
+    - items:
+        Arrows (10): 11
+      locations:
+        - Chicken House
+        - Mini Moldorm Cave - Far Right
+        - Ganons Tower - Bob's Chest
+        - Ganons Tower - Hope Room - Left
+        - Ganons Tower - Big Key Room - Left
+        - Ganons Tower - DMs Room - Top Right
+        - Ganons Tower - Randomizer Room - Top Left
+        - Ganons Tower - Compass Room - Bottom Right
+        - Ganons Tower - Randomizer Room - Top Right
+        - Sewers - Secret Room - Right
+        - Paradox Cave Upper - Right
+      world: Null
+      percentage: 100

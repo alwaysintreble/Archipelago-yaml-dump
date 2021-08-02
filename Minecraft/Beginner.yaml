@@ -1,0 +1,23 @@
+description: minecraft basic settings
+name: YourName{NUMBER}
+requires:
+  version: 0.1.5
+game: minecraft
+accessibility: items
+progression_balancing: on
+
+
+Minecraft:
+  start_inventory:
+    Shulker Box: 1
+  advancement_goal: 30
+  combat_difficulty: normal
+  include_hard_advancements: off
+  include_insane_advancements: off
+  include_postgame_advancements: off
+  shuffle_structures: on
+  structure_compasses: on
+  bee_traps: off
+  exclude_locations: 
+    - Total Beelocation
+    - Sticky Situation

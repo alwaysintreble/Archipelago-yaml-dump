@@ -1,0 +1,8 @@
+description: Open Preset. 7 crystals required for both GT and ganon and GT needs to be climbed
+name: Open
+game: A Link to the Past
+requires:
+  version: 0.1.9
+A Link to the Past:
+  goals: ganon
+  mode: open

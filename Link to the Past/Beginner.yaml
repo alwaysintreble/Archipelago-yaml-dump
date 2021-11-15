@@ -1,0 +1,10 @@
+description: beginner friendly preset. 7 crystals needed for both GT and ganon. GT must be climbed. Standard start with a free sword
+name: Beginner
+game: A Link to the Past
+requires:
+  version: 0.1.9
+A Link to the Past:
+  goals: ganon
+  mode: standard
+  start_inventory:
+    Progressive Sword: 1

@@ -1,16 +1,16 @@
-description: Ah so you like chaos
+description: I'm here to kill chaos
 name: Chaos{NUMBER}
 game: Factorio
 requires:
-  version: 0.1.5
+  version: 0.2.0
 Factorio:
   recipe_time: chaos
   recipe_ingredients: science_pack
   max_science_pack:
-    logistic_science_pack: 1
     military_science_pack: 1
     chemical_science_pack: 1
-    production_scuence_pack: 1
+    production_science_pack: 1
+    utility_science_pack: 1
   tech_cost:
     kind: 1
     normal: 1

@@ -1,0 +1,17 @@
+description: Beginner Risk of Rain 2 settings
+# Your name in-game. Spaces will be replaced with underscores and there is a 16 character limit
+name: YourName{number}
+#{player} will be replaced with the player's slot number.
+#{PLAYER} will be replaced with the player's slot number if that slot number is greater than 1.
+#{number} will be replaced with the counter value of the name.
+#{NUMBER} will be replaced with the counter value of the name if the counter value is greater than 1.
+game: Risk of Rain 2
+requires:
+  version: 0.1.9
+Risk of Rain 2:
+  total_locations: 20
+  total_revivals: 10
+  start_with_revive: true
+  item_pickup_step: 3
+  enable_lunar: false
+  item_weights: uncommon

@@ -1,8 +1,8 @@
-description: beginner preset
+description: beginner preset for a sync multiworld
 name: Beginner{NUMBER}
 game: Factorio
 requires:
-  version: 0.1.5
+  version: 0.2.0
 Factorio:
   tech_tree_layout:
     single: 1
@@ -49,7 +49,8 @@ Factorio:
       uranium-ore:
         frequency: 0
     peaceful_mode: 1
+    # who needs cliffs anyways
     cliff_settings:
       name: cliff
-      cliff_elevation_0:0
+      cliff_elevation_0: 0
       richness: 0

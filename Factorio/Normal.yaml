@@ -1,8 +1,8 @@
-description: Factorio Normal Preset
+description: Factorio Normal Preset for sync multi
 name: Normal{NUMBER}
 game: Factorio
 requires:
-  version: 0.1.5
+  version: 0.2.0
 Factorio:
   tech_tree_layout:
     small_diamonds: 1
@@ -46,5 +46,3 @@ Factorio:
         frequency: 2
         size: 5
         richness: 6
-        
-        

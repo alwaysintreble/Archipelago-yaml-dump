@@ -2,7 +2,7 @@ description: beginner friendly preset. 7 crystals needed for both GT and ganon. 
 name: Beginner
 game: A Link to the Past
 requires:
-  version: 0.1.9
+  version: 0.2.0
 A Link to the Past:
   goals: ganon
   mode: standard

@@ -1,7 +1,7 @@
 description: minecraft basic settings
 name: YourName{NUMBER}
 requires:
-  version: 0.1.5
+  version: 0.2.0
 game: minecraft
 accessibility: items
 progression_balancing: on

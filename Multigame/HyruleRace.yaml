@@ -4,7 +4,7 @@ name: Hyrule # Your name in-game. Spaces will be replaced with underscores and t
 game:
   A Link to the Past: 1
 requires:
-  version: 0.1.5 # Version of Archipelago required for this yaml to work as expected.
+  version: 0.1.7 # Version of Archipelago required for this yaml to work as expected.
 # Shared Options supported by all games:
 accessibility:
   items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
@@ -26,26 +26,20 @@ A Link to the Past:
     lamp: 50 # require the Lamp for these rooms to be considered accessible.
     torches: 0 # in addition to lamp, allow the fire rod and presence of easily accessible torches for access
     none: 0 # all dark rooms are always considered doable, meaning this may force completion of rooms in complete darkness
-  restrict_dungeon_item_on_boss: # aka ambrosia boss items
-    on: 0 # prevents unshuffled compasses, maps and keys to be boss drops, they can still drop keysanity and other players' items
-    off: 50
   ### End of Logic Section ###
-  dungeon_items: # Alternative to the 4 shuffles and local_keys above this, does nothing until the respective 4 shuffles and local_keys above are deleted
+  legacy_dungeon_items:
     mc: 10 # Shuffle maps and compasses
     none: 50 # Shuffle none of the 4
-    mcsb: 0 # Shuffle all of the 4, any combination of m, c, s and b will shuffle the respective item, or not if it's missing, so you can add more options here
     lmcsb: 10 # Like mcsb above, but with keys kept local to your world. l is what makes your keys local, or not if it's missing
-    ub: 0 # universal small keys and shuffled big keys
-    # you can add more combos of these letters here
+  compass_shuffle: original_dungeon
+  map_shuffle: original_dungeon
+  bigkey_shuffle: original_dungeon
+  smallkey_shuffle: original_dungeon
   dungeon_counters:
     on: 0 # Always display amount of items checked in a dungeon
     pickup: 50 # Show when compass is picked up
     default: 0 # Show when compass is picked up if the compass itself is shuffled
     off: 0 # Never show item count in dungeons
-  progressive: # Enable or disable progressive items (swords, shields, bow)
-    on: 50 # All items are progressive
-    off: 0 # No items are progressive
-    random: 0 # Randomly decides for all items. Swords could be progressive, shields might not be
   entrance_shuffle:
     none: 50 # Vanilla game map. All entrances and exits lead to their original locations. You probably want this option
     dungeonssimple: 0 # Shuffle just dungeons amongst each other, swapping dungeons entirely, so Hyrule Castle is always 1 dungeon
@@ -67,18 +61,37 @@ A Link to the Past:
     ganon_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then kill Ganon
     local_ganon_triforce_hunt: 0 # Collect 20 of 30 Triforce pieces spread throughout your world, then kill Ganon
     ice_rod_hunt: 0 # You start with everything needed to 216 the seed. Find the Ice rod, then kill Trinexx at Turtle rock.
-  open_pyramid: goal
-    triforce_pieces_mode: #Determine how to calculate the extra available triforce pieces.
-    extra: 0 # available = triforce_pieces_extra + triforce_pieces_required
-    percentage: 0 # available = (triforce_pieces_percentage /100) * triforce_pieces_required
-    available: 50 # available = triforce_pieces_available
-  triforce_pieces_extra:
-    5: 50
-    10: 50
-  triforce_pieces_percentage: 150
-  triforce_pieces_available: 30
-  triforce_pieces_required: 20  crystals_needed_for_gt: random-low
-  crystals_needed_for_ganon: random-high
+  open_pyramid:
+    goal: 50 # Opens the pyramid if the goal requires you to kill Ganon, unless the goal is Slow Ganon or All Bosses
+    auto: 0 # Same as Goal, but also is closed if holes are shuffled and ganon is part of the shuffle pool
+    yes: 0 # Pyramid hole is always open. Ganon's vulnerable condition is still required before he can he hurt
+    no: 0 # Pyramid hole is always closed until you defeat Agahnim atop Ganon's Tower
+  crystals_needed_for_gt: # Crystals required to open GT
+    0: 0
+    1: 0
+    2: 0
+    3: 0
+    4: 0
+    5: 0
+    6: 0
+    7: 0
+    random: 0
+    random-low: 50 # any valid number, weighted towards the lower end
+    random-middle: 0 # any valid number, weighted towards the central range
+    random-high: 0 # any valid number, weighted towards the higher end
+  crystals_needed_for_ganon: # Crystals required to hurt Ganon
+    0: 0
+    1: 0
+    2: 0
+    3: 0
+    4: 0
+    5: 0
+    6: 0
+    7: 0
+    random: 0
+    random-low: 0
+    random-middle: 0
+    random-high: 50
   mode:
     standard: 25 # Begin the game by rescuing Zelda from her cell and escorting her to the Sanctuary
     open: 50 # Begin the game from your choice of Link's House or the Sanctuary
@@ -86,32 +99,18 @@ A Link to the Past:
   hints:
     'on': 50 # Hint tiles sometimes give item location hints
     'off': 0 # Hint tiles provide gameplay tips
+  item_pool: normal
+  item_functionality: normal
   boss_shuffle:
     none: 75 # Vanilla bosses
     basic: 0 # Existing bosses except Ganon and Agahnim are shuffled throughout dungeons
     full: 0 # 3 bosses can occur twice
     chaos: 0 # Any boss can appear any amount of times
     singularity: 25 # Picks a boss, tries to put it everywhere that works, if there's spaces remaining it picks a boss to fill those
-  ### Shop Settings ###
   shop_item_slots: # Maximum amount of shop slots to be filled with regular item pool items (such as Moon Pearl)
     0: 50
-    5: 0
-    15: 0
     30: 10
-    random: 0 # 0 to 30 evenly distributed
-  shop_shuffle:
-    none: 0
-    g: 0 # Generate new default inventories for overworld/underworld shops, and unique shops
-    f: 0 # Generate new default inventories for every shop independently
-    i: 0 # Shuffle default inventories of the shops around
-    p: 0 # Randomize the prices of the items in shop inventories
-    u: 50 # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld)
-    w: 0 # Consider witch's hut like any other shop and shuffle/randomize it too
-    ip: 0 # Shuffle inventories and randomize prices
-    fpu: 0 # Generate new inventories, randomize prices and shuffle capacity upgrades into item pool
-    uip: 0 # Shuffle inventories, randomize prices and shuffle capacity upgrades into the item pool
-    # You can add more combos
-  ### End of Shop Section ###
+  shop_shuffle: u # Shuffle capacity upgrades into the item pool (and allow them to traverse the multiworld)
 triggers:
   - option_name: shop_item_slots
     option_result: 30
@@ -120,3 +119,19 @@ triggers:
       A Link to the Past:
         start_inventory:
           Rupees (300): 2
+  - option_name: legacy_dungeon_items
+    option_result: mc
+    option_category: A Link to the Past
+    options:
+      A Link to the Past:
+        compass_shuffle: any_world
+        map_shuffle: any_world
+  - option_name: legacy_dungeon_items
+    option_result: lmcsb
+    option_category: A Link to the Past
+    options:
+      A Link to the Past:
+        compass_shuffle: own_world
+        map_shuffle: own_world
+        bigkey_shuffle: own_world
+        smallkey_shuffle: own_world

@@ -2,7 +2,7 @@ description: Racing Weights
 name: Nauvis
 game: Factorio
 requires:
-  version: 0.1.5
+  version: 0.1.4
 # Shared Options supported by all games:
 accessibility:
   items: 0
@@ -39,6 +39,7 @@ Factorio:
     space_science_pack: 0
   progressive:
     on: 1
+    random_grouped: 0
     off: 0
   tech_cost:
     very_easy : 0
@@ -53,18 +54,6 @@ Factorio:
     single_craft: 0
     half_stack: 0
     stack: 1
-  tech_tree_information:
-    none: 0
-    advancement: 1 # show which items are a logical advancement
-    full: 0 # show full info on each tech node
-  imported_blueprints: off
-  recipe_ingredients:
-    rocket: 0 # only randomize rocket part recipe
-    science_pack: 1 # also randomize science pack ingredients
-  starting_items:
-    burner-mining-drill: 19
-    stone-furnace: 19
-    lab: 1
   world_gen:
     autoplace_controls:
       coal:
@@ -92,3 +81,15 @@ Factorio:
         size: 5
         richness: 6
     seed: null
+  tech_tree_information:
+    none: 0
+    advancement: 1 # show which items are a logical advancement
+    full: 0 # show full info on each tech node
+  imported_blueprints: off
+  recipe_ingredients:
+    rocket: 0 # only randomize rocket part recipe
+    science_pack: 1 # also randomize science pack ingredients
+  starting_items:
+    burner-mining-drill: 19
+    stone-furnace: 19
+    lab: 1

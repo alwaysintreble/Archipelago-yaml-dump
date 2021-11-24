@@ -1,0 +1,12 @@
+description: crosskeys preset
+name: Crossed{NUMBER}
+game: A Link to the Past
+requires: version 0.2.0
+A Link to the Past:
+  crystals_needed_for_GT: random
+  crystals_needed_for_ganon: random
+  bigkey_shuffle: any_world
+  smallkey_shuffle: any_world
+  compass_shuffle: any_world
+  map_shuffle: any_world
+  entrance_shuffle: crossed

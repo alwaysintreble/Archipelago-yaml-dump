@@ -26,7 +26,7 @@ name: YourName{number} # Your name in-game. Spaces will be replaced with undersc
 game: # Pick a game to play
   A Link to the Past: 1
 requires:
-  version: 0.2.1 # Version of Archipelago required for this yaml to work as expected.
+  version: 0.2.3 # Version of Archipelago required for this yaml to work as expected.
 # Shared Options supported by all games:
 accessibility:
   items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
@@ -248,6 +248,14 @@ A Link to the Past:
     15: 0
     30: 0
     random: 0 # 0 to 30 evenly distributed
+  shop_price_modifier: # Percentage modifier for shuffled item prices in shops
+    # you can add additional values between minimum and maximum
+    0: 0 # minimum value
+    400: 0 # maximum value
+    random: 0
+    random-low: 0
+    random-high: 0
+    100: 50
   shop_shuffle:
     none: 50
     g: 0 # Generate new default inventories for overworld/underworld shops, and unique shops

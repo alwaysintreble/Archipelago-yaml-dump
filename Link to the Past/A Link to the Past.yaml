@@ -58,6 +58,7 @@ A Link to the Past:
     own_world: 0
     any_world: 0
     different_world: 0
+    start_with: 0
   smallkey_shuffle: # Small Key Placement
     original_dungeon: 50
     own_dungeons: 0
@@ -65,18 +66,21 @@ A Link to the Past:
     any_world: 0
     different_world: 0
     universal: 0
+    start_with: 0
   compass_shuffle: # Compass Placement
     original_dungeon: 50
     own_dungeons: 0
     own_world: 0
     any_world: 0
     different_world: 0
+    start_with: 0
   map_shuffle: # Map Placement
     original_dungeon: 50
     own_dungeons: 0
     own_world: 0
     any_world: 0
     different_world: 0
+    start_with: 0
   dungeon_counters:
     on: 0 # Always display amount of items checked in a dungeon
     pickup: 50 # Show when compass is picked up

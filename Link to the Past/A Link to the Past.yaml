@@ -26,19 +26,19 @@ name: YourName{number} # Your name in-game. Spaces will be replaced with undersc
 game: # Pick a game to play
   A Link to the Past: 1
 requires:
-  version: 0.2.3 # Version of Archipelago required for this yaml to work as expected.
-# Shared Options supported by all games:
-accessibility:
-  items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
-  locations: 50 # Guarantees you will be able to access all locations, and therefore all items
-  none: 0 # Guarantees only that the game is beatable. You may not be able to access all locations or acquire all items
-progression_balancing:
-  0: 0 # Choose a lower number if you don't mind a longer multiworld, or can glitch/sequence break around missing items.
-  25: 0
-  50: 50 # Make it likely you have stuff to do.
-  99: 0 # Get important items early, and stay at the front of the progression.
+  version: 0.3.2 # Version of Archipelago required for this yaml to work as expected.
+
 A Link to the Past:
   ### Logic Section ###
+  progression_balancing:
+    0: 0 # Choose a lower number if you don't mind a longer multiworld, or can glitch/sequence break around missing items.
+    25: 0
+    50: 50 # Make it likely you have stuff to do.
+    99: 0 # Get important items early, and stay at the front of the progression.
+  accessibility:
+    items: 0 # Guarantees you will be able to acquire all items, but you may not be able to access all locations
+    locations: 50 # Guarantees you will be able to access all locations, and therefore all items
+    none: 0 # Guarantees only that the game is beatable. You may not be able to access all locations or acquire all items
   glitches_required: # Determine the logic required to complete the seed
     none: 50 # No glitches required
     minor_glitches: 0 # Puts fake flipper, waterwalk, super bunny shenanigans, and etc into logic

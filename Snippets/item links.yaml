@@ -1,0 +1,9 @@
+name: itemlinker
+game: A Link to the past
+A Link to the past: 
+  item_links: # Share part of your item pool with other players.
+    - name: Lttpall
+      item_pool:
+        - Everything
+      replacement_item: Rupees (20)
+     

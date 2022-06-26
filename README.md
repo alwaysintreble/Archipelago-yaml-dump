@@ -1,2 +1,2 @@
 # Archipelago-yaml-dump
-Collection of various up to date yamls for use with the Archipelago system
+Collection of various yamls and yaml snippets for use with [Archipelago](https://github.com/ArchipelagoMW/Archipelago).

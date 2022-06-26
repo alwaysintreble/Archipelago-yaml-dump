@@ -8,7 +8,7 @@
 requires:
   version: 0.1.4
   plando:
-    items, text
+    items, texts
 triggers:
   ### Start Mecenary mode trigger block ###
   # check to see if our goal is mecenary mode

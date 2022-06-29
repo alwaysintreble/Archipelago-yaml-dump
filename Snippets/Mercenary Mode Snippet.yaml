@@ -6,7 +6,6 @@
 #######################################
 # add the required plando stuff as the generation will fail if these are not turned on.
 requires:
-  version: 0.1.4
   plando:
     items, texts
 triggers:
@@ -175,4 +174,4 @@ triggers:
             at: kakariko_tavern_fisherman
           - text: "A hit has been put out on one of Ganon's generals."
             at: sign_ganon
-### END Mercenay mode trigger block ###
+### END Mercenary mode trigger block ###
